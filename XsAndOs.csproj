@@ -7,7 +7,7 @@
     <ProjectGuid>{025F1154-64E4-49AC-B179-E01F7360461A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>XsAndOs</RootNamespace>
-    <AssemblyName>XsAndOs</AssemblyName>
+    <AssemblyName>xs-and-os</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

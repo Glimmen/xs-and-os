@@ -12,25 +12,37 @@ namespace XsAndOs
         {
             string playerOne = "X";
             string playerTwo = "O";
-            char spaceOne = 'X';
-            char spaceTwo = ' ';
-            char spaceThree = ' ';
-            char spaceFour = ' ';
-            char spaceFive = ' ';
-            char spaceSix = ' ';
-            char spaceSeven = ' ';
-            char spaceEight = ' ';
-            char spaceNine = ' ';
+            char[,] grid = new char[3, 3];
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (grid[i, 0] != ' ' || grid[i, 1] != ' ' || grid[i, 2] != ' ')
+                {
+                    grid[i, 0] = ' ';
+                    grid[i, 1] = ' ';
+                    grid[i, 2] = ' ';
+                }
+            }
 
             Console.WriteLine("" + playerOne + "'S AND " + playerTwo + "'S");
-            Console.WriteLine("    aka    \nTIC TAC TOE");
-            Console.WriteLine("");
-            Console.WriteLine(" "+spaceOne+" | "+spaceTwo+" | "+spaceThree+" ");
-            Console.WriteLine("---+---+---");
-            Console.WriteLine(" "+spaceFour+" | "+spaceFive+" | "+spaceSix+" ");
-            Console.WriteLine("---+---+---");
-            Console.WriteLine(" "+spaceSeven+" | "+spaceEight+" | "+spaceNine+" ");
+            Console.WriteLine("    aka    \nTIC TAC TOE\n");
 
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(" " +grid[i, j]+ " ");
+
+                    if (j < 2)
+                    {
+                        Console.Write("|");
+                    }
+                    if (j == 2 && i != 2)
+                    {
+                        Console.Write("\n---+---+---\n");
+                    }
+                }
+            }
             Console.ReadLine(); 
         }
     }
