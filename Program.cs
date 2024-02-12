@@ -22,13 +22,63 @@ namespace XsAndOs
 
             gameMode = SelectMode();
             
+            if (gameMode == "1")
+            {
+                OnePlayer();
 
+            }
+            if (gameMode == "2")
+            {
+                TwoPlayer();
+            }
 
             Console.ReadLine();
 
         }
 
         static void MainScreen()
+        {
+
+        }
+
+        static void OnePlayer()
+        {
+
+        }
+
+        static void TwoPlayer(char[,] grid)
+        {
+            string playerOne = "X";
+            string playerTwo = "O";
+            int round = 1;
+
+            while (round != 0)
+            {
+                if (round % 2 != 0)
+                {
+                    Console.WriteLine("START! " + playerOne + " will play the first turn.");
+                }
+
+                if (round % 2 == 0){
+                    Console.WriteLine("START! " + playerTwo + " will play the first turn.");
+                }
+            }
+
+            PrintGrid(grid);
+
+            PlayerMove(playerOne);
+
+        }
+
+        static void PlayerMove(string player)
+        {
+            Console.WriteLine("Where would you like to mark \"" +player+ "\"?");
+            string choice = Console.ReadLine();
+            int valid = CheckValidMove(choice);
+
+        }
+
+        static void CpuMove()
         {
 
         }
@@ -95,14 +145,18 @@ namespace XsAndOs
             return choice;
         }
 
-        static void DecideWinner()
+        static void CheckWinner()
         {
 
         }
 
-        static void CpuMove()
+        static int CheckValidMove(string choice)
         {
+            int valid = 0;
 
+
+
+            return valid;
         }
     }
 }
